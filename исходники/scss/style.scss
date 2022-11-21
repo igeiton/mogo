@@ -1,0 +1,148 @@
+@import "utilits/null";
+
+
+
+html, body {
+    height: 100%;
+}
+
+[class*="__container"] {
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url('../img/main_bgc.png');
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+
+    &__container__menu {
+        display: flex;
+        height: 90px;
+        justify-content: space-between;
+        align-items: center;
+        & img {
+            transition: .3s;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    &__logo {
+        flex: 1 1 calc(1200px - 620px);
+        font-size: 30px;
+        font-family: "Montserrat";
+        font-weight: bold;
+        line-height: 1.2;
+        color: #fff;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        & a {
+            margin: 0px 55px 0px 0px;
+            display: inline-block;
+        }
+        &__open {
+            display: none;
+        }
+        &-links {
+            display: flex;
+            & a:hover {
+                color: #fce38a;
+                &:after {
+                    width: 90%;
+                    left: 5%;
+                    background-color: #fce38a;
+                }
+            }
+            & a:after {
+                position: absolute;
+                content: "";
+                width: 0%;
+                height: 3px;
+                left: 50%;
+                bottom: -12px;
+                background-color: #fff;
+                transition: .3s;
+            }
+        } 
+        & a {
+            font-size: 14px;
+            font-family: "Montserrat";
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+        &-icons {
+            display: flex;
+            & a:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    &__body {
+        margin: 150px 0px 0px 0px;
+    }
+}
+
+@media (max-width: 1100px) {
+    [class*="__container"] {
+        max-width: 1300px;
+        margin: 0 auto;
+
+    }
+    .header a {
+        margin: 0px 30px 0px 0px;
+    }
+}
+@media (max-width: 991px) {
+    [class*="__container"] {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+    .header {
+        margin: 0px 0px 0px 0px;
+        &__menu-links {
+            display: none;
+        }
+        &__menu__open { /* ============================= здесь не появляется три полоски для меню */
+            position: relative;
+            margin: 0px 30px 0px 0px;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            & span {
+                height: 3px;
+                background-color: #000;
+            }
+            &:before, &:after {
+                position: absolute;
+                content: "";
+                height: 3px;
+                background-color: #000;
+            }
+        }            /* ========================================================================= */
+    }
+}
+@media (max-width: 767px) { /* ================== здесь header__container или же верхняя шапка не имеет отступов по краям при <767px */
+    [class*="__container"] {
+        max-width: 500px;
+        padding: 0 50px;
+        margin: 0 100px;
+    }                      /* ====================================================================================================== */
+}
+
+
+
+a, a:visited {
+    position: relative;
+    color: #fff;
+    transition: .3s;
+}
