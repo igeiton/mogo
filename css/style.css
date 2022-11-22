@@ -380,7 +380,6 @@ h1, h2, h3, h4, h5, h6 {
 .main__block-03 {
   height: 100%;
   max-width: 100vw;
-  background-image: url("../../img/block_03/bcg.png");
   background-size: cover;
   background-position: center;
   padding: 110px 0px 0px 0px;
@@ -829,7 +828,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* =============================================== */
 .main__block-07 {
-  background-image: url(../../img/block_07/01.png);
   background-position: center;
   background-size: cover;
   padding: 110px 0px 130px 0px;
@@ -1083,7 +1081,6 @@ h1, h2, h3, h4, h5, h6 {
 /* =============================================== */
 .main__block-09 {
   padding: 60px 0px 78px 0px;
-  background-image: url(../../img/block_09/01.png);
   background-position: center;
   background-size: cover;
   min-height: 200px;
